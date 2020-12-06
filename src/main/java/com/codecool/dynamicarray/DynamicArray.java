@@ -43,17 +43,23 @@ public class DynamicArray {
         size++;
     }
 
-    public int get(int index){
+//    public int get(int index){
+//        return array[index];
+//    }
+
+    public int get(int index) throws ArrayIndexOutOfBoundsException {
+        if (size <= index) throw new ArrayIndexOutOfBoundsException();
         return array[index];
     }
 
-//    public int get(int index) throws ArrayIndexOutOfBoundEception {
-//        if (size <= index){ throw new ArrayIndexOutOfBoundEception();}
+//    public int get(int index){
+//        if (size <= index) throw new ArrayIndexOutOfBoundsException();
 //        return array[index];
 //    }
 
 
     public void remove(int indexToBeRemoved) {
+        if (size <= indexToBeRemoved) throw new ArrayIndexOutOfBoundsException();
         int[] newArray = new int[array.length - 1];
         for (int i = 0, j = 0; i < array.length; i++) {
             if (i == indexToBeRemoved) continue;
