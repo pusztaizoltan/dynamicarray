@@ -50,7 +50,6 @@ public class DynamicArray {
 //    public int get(int index) throws ArrayIndexOutOfBoundEception {
 //        if (size <= index){ throw new ArrayIndexOutOfBoundEception();}
 //        return array[index];
-//
 //    }
 
 
