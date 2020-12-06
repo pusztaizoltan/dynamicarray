@@ -4,9 +4,10 @@ import java.util.Arrays;
 
 public class DynamicArray {
     private int capacity;
-    public int[] array;
-//    private int[] array;
+//    public int[] array;
+    private int[] array;
     private int size = 0;
+    private String stingRep;
 
     // to test in preset array use array with length mor then 4
     public DynamicArray(int[] testArray) {
@@ -23,6 +24,11 @@ public class DynamicArray {
     public DynamicArray() {
         this.array = new int[4];
         this.capacity = 4;
+    }
+
+    public int[] getArray(){
+        int [] filledArray = Arrays.copyOf(array, size);
+        return filledArray;
     }
 
     public int getCapacity() {
@@ -103,7 +109,8 @@ public class DynamicArray {
             } else {
                 stingReprezentation += "]";}
         }
-        return stingReprezentation;
+        stingRep = stingReprezentation;
+        return this.stingRep;
     }
 
 //    private class ArrayIndexOutOfBoundEception extends Exception {
